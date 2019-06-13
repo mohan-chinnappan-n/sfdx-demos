@@ -1,5 +1,7 @@
 ## SFDX Demos
 
+### Agenda
+
 - How to setup a Dev Hub for the development
 
 - Create a project (GreenProject)
