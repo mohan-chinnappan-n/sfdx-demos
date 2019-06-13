@@ -371,5 +371,25 @@ public with sharing class AccountCtrl {
 
 }
 
+
+### Check-in to the repo
+
+git add -A
+git commit -m 'added AccountCtrl apex class'
+git push origin master
+
+
 ```
+
+
+## Branching
+
+- [Branching](https://mohan-chinnappan-n.github.io/sfdc/dx.html#/25)
+
+##  Creating a stock quote LWC (Lightning Web Component App) using SFDX
+
+- [stock quote LWC ](https://mohan-chinnappan-n2.github.io/2019/dx/dx-demos.html#Component%20Diagram)
+
+
+
 
