@@ -34,6 +34,9 @@
 - Talk about CI/CD with Jenkins and share the recorded demo
     - [CI/CD Demo](https://mohan-chinnappan-n.github.io/dx/dx-ci.html#/1)
 
+- Package Development
+    - [Packages fundamentals](https://mohan-chinnappan-n2.github.io/2019/dx/dx-2.html#Package%20Development)
+
 ###
 
 ``` bash
