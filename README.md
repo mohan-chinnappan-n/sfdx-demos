@@ -1,5 +1,29 @@
 ## SFDX Demos
 
+- How to setup a Dev Hub for the development
+
+- Create a project (GreenProject)
+
+- Creating a Git repo for source-based development (instead of Org-based development)
+
+-  Scratch org creation for the development
+
+-  Explain how to synch project folder and Scratch Org
+    - Config
+        - In the Org create a new field in Account.GreenProjectInUse__c (config)
+        - Sync that with the project folder using source:pull
+    - Coding
+        - In the project folder create Apex class (AccountCtrl) using apex:class:create 
+        - Sync that with the scratch org using source:push
+        - In the scratch org UI - Developer Console update AccountCtrl.cls
+        - Sync that with the project folder using source:pull 
+
+- Provide Branching suggestion and talk about merging
+
+- Demo (recorded) how to build a Stock Quote LWC (Lightning Web Component) using SFDX
+
+- Talk about CI/CD with Jenkins and share the recorded demo
+
 ###
 
 ``` bash
