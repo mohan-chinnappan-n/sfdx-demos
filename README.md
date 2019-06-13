@@ -248,8 +248,128 @@ Add    Custom%3A Support Profile               Profile      force-app/main/defau
 Add    Custom%3A Sales Profile                 Profile      force-app/main/default/profiles/Custom%3A Sales Profile.profile-meta.xml
 Add    Custom%3A Marketing Profile             Profile      force-app/main/default/profiles/Custom%3A Marketing Profile.profile-meta.xml
 
+```
+
+### Check into git
+
+``` bash
+
+git add -A
+git commit -m 'added Account.GreenProjectInUse__c field'
+git push origin master
+
+```
+
+### Create an Apex class: AccountCtrl using CLI
+``` bash
+sfdx force:apex:class:create -n AccountCtrl -d force-app/main/default/classes
+
+target dir = /Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/classes
+   create AccountCtrl.cls
+   create AccountCtrl.cls-meta.xml
+
+$ tree
+.
+├── README.md
+├── config
+│   └── project-scratch-def.json
+├── force-app
+│   └── main
+│       └── default
+│           ├── aura
+│           ├── classes
+│           │   ├── AccountCtrl.cls
+│           │   └── AccountCtrl.cls-meta.xml
+│           ├── layouts
+│           │   ├── Account-Account\ %28Marketing%29\ Layout.layout-meta.xml
+│           │   ├── Account-Account\ %28Sales%29\ Layout.layout-meta.xml
+│           │   ├── Account-Account\ %28Support%29\ Layout.layout-meta.xml
+│           │   └── Account-Account\ Layout.layout-meta.xml
+│           ├── lwc
+│           ├── objects
+│           │   └── Account
+│           │       └── fields
+│           │           └── GreenProjectInUse__c.field-meta.xml
+│           └── profiles
+│               ├── Admin.profile-meta.xml
+│               ├── Custom%3A\ Marketing\ Profile.profile-meta.xml
+│               ├── Custom%3A\ Sales\ Profile.profile-meta.xml
+│               └── Custom%3A\ Support\ Profile.profile-meta.xml
+└── sfdx-project.json
+
+cat force-app/main/default/classes/AccountCtrl.cls
+public with sharing class AccountCtrl {
+    public AccountCtrl() {
+
+    }
+}
+
+### push this Apex class into the Scratch Org
+
+sfdx force:source:push
+
+$ sfdx force:source:push
+=== Pushed Source
+STATE  FULL NAME    TYPE       PROJECT PATH
+─────  ───────────  ─────────  ───────────────────────────────────────────────────────
+Add    AccountCtrl  ApexClass  force-app/main/default/classes/AccountCtrl.cls
+Add    AccountCtrl  ApexClass  force-app/main/default/classes/AccountCtrl.cls-meta.xml
+
+```
+### Make some edits in this Apex Class using UI in Scratch Org
+
+```java
+
+public with sharing class AccountCtrl {
+    public AccountCtrl() {
+     
+    }
+    
+    @AuraEnabled
+    public static List<account> findAll() {
+        return [SELECT Id, Name, GreenProjectInUse__c 
+                FROM Account
+                LIMIT 50
+               ];
+    }
+    
+}
 
 
+```
 
 
+### source pull from the scratch org to the project folder
+
+``` bash
+
+sfdx force:source:pull -u gp_sorg_1
+
+$ sfdx force:source:pull -u gp_sorg_1
+=== Pulled Source
+STATE    FULL NAME    TYPE       PROJECT PATH
+───────  ───────────  ─────────  ───────────────────────────────────────────────────────
+Changed  AccountCtrl  ApexClass  force-app/main/default/classes/AccountCtrl.cls-meta.xml
+Changed  AccountCtrl  ApexClass  force-app/main/default/classes/AccountCtrl.cls
+Changed  Admin        Profile    force-app/main/default/profiles/Admin.profile-meta.xml
+
+## Check the Apex class source in the project folder
+
+$ cat force-app/main/default/classes/AccountCtrl.cls
+public with sharing class AccountCtrl {
+    public AccountCtrl() {
+     
+    }
+    
+    @AuraEnabled
+    public static List<account> findAll() {
+        return [SELECT Id, Name, GreenProjectInUse__c 
+                FROM Account
+                LIMIT 50
+               ];
+    }
+
+}
+
+```
 
