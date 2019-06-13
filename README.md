@@ -3,6 +3,7 @@
 ### Agenda
 
 - How to setup a Dev Hub for the development
+    - [DX Fundamentals](https://mohan-chinnappan-n.github.io/sfdc/dx.html#/32)
 
 - Create a project (GreenProject)
 
@@ -21,10 +22,17 @@
         - Sync that with the project folder using source:pull 
 
 - Provide Branching suggestion and talk about merging
+    - [Branching](https://mohan-chinnappan-n.github.io/sfdc/dx.html#/25)
 
 - Demo (recorded) how to build a Stock Quote LWC (Lightning Web Component) using SFDX
+    - [LWC SFDX Demo](https://mohan-chinnappan-n2.github.io/2019/dx/dx-demos.html#Use%20Case)
+
+- SFDX Plugins
+    - [Plugins doc](https://mohan-chinnappan-n.github.io/dx/plugins.html#/home)
+
 
 - Talk about CI/CD with Jenkins and share the recorded demo
+    - [CI/CD Demo](https://mohan-chinnappan-n.github.io/dx/dx-ci.html#/1)
 
 ###
 
