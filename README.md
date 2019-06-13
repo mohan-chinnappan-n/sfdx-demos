@@ -94,4 +94,162 @@ GreenProject/
 ```
 
 
+### check-in to git
+
+``` bash
+ git add -A
+ git commit -m 'project init'
+[master 6761eb9] project init
+ 5 files changed, 139 insertions(+), 1 deletion(-)
+ create mode 100644 GreenProject/.forceignore
+ create mode 100644 GreenProject/README.md
+ create mode 100644 GreenProject/config/project-scratch-def.json
+ create mode 100644 GreenProject/sfdx-project.json
+ rewrite README.md (100%)
+
+ git remote add origin https://github.com/mohan-chinnappan-n/sfdx-demos.git
+
+ git push origin master
+
+Counting objects: 12, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (12/12), 2.19 KiB | 2.19 MiB/s, done.
+Total 12 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/mohan-chinnappan-n/sfdx-demos.git
+ * [new branch]      master -> master
+
+
+```
+
+### Scratch org creation
+
+```bash
+
+# list active scratch orgs
+sfdx force:limits:api:display -u DevHub
+
+
+ sfdx force:limits:api:display -u DevHub
+NAME                                   REMAINING  MAXIMUM
+─────────────────────────────────────  ─────────  ─────────
+ActiveScratchOrgs                      20         20
+ConcurrentAsyncGetReportInstances      200        200
+ConcurrentSyncReportRuns               20         20
+DailyAnalyticsDataflowJobExecutions    60         60
+DailyApiRequests                       14996      15000
+DailyAsyncApexExecutions               250000     250000
+DailyBulkApiRequests                   10000      10000
+DailyDurableGenericStreamingApiEvents  200000     200000
+DailyDurableStreamingApiEvents         200000     200000
+DailyGenericStreamingApiEvents         10000      10000
+DailyScratchOrgs                       40         40
+DailyStandardVolumePlatformEvents      25000      25000
+DailyStreamingApiEvents                200000     200000
+DailyWorkflowEmails                    150        150
+DataStorageMB                          10440      10440
+DurableStreamingApiConcurrentClients   999        1000
+FileStorageMB                          1024       1024
+HourlyAsyncReportRuns                  1200       1200
+HourlyDashboardRefreshes               200        200
+HourlyDashboardResults                 5000       5000
+HourlyDashboardStatuses                999999999  999999999
+HourlyLongTermIdMapping                100000     100000
+HourlyODataCallout                     20000      20000
+HourlyShortTermIdMapping               100000     100000
+HourlySyncReportRuns                   500        500
+HourlyTimeBasedWorkflow                50         50
+MassEmail                              10         10
+MonthlyPlatformEvents                  750000     750000
+Package2VersionCreates                 40         40
+PermissionSets                         1499       1500
+SingleEmail                            15         15
+StreamingApiConcurrentClients          1000       1000
+
+
+Scratch orgs have these storage limits:
+
+    200 MB for data
+    50 MB for files
+
+ref: https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_scratch_orgs.htm
+
+Edition 	Active Scratch Org Allocation 	Daily Scratch Org Allocation
+Developer Edition or trial 	3 	6
+Enterprise Edition 	40 	80
+Unlimited Edition 	100 	200
+Performance Edition 	100 	200
+
+##=============
+
+cd GreenProject
+
+# -s, --setdefaultusername                         set the created org as the default org for this project
+# -f, --definitionfile DEFINITIONFILE              path to a scratch org definition file
+# -a, --setalias SETALIAS                          set an alias for for the created scratch org
+# -d, --durationdays DURATIONDAYS                  duration of the scratch org (in days) (default:7, min:1, max:30)
+
+sfdx force:org:create -s -f config/project-scratch-def.json -a gp_sorg_1
+Successfully created scratch org: 00D540000001L9YEAU, username: test-814uzdqzt3jg@example.com
+
+$ sfdx force:org:list 
+=== Orgs
+     ALIAS     USERNAME                           ORG ID              CONNECTED STATUS
+───  ────────  ─────────────────────────────────  ──────────────────  ────────────────
+               mohan.chinnappan.n33@gmail.com     00Df4000002db0kEAA  Connected
+               mohan.chinnappan.n_ea@gmail.com    00D1N000001Tjk2UAC  Connected
+(D)  DevHub    mohan.chinnappan.dh25@gmail.com    00D4P000000yzuxUAA  Connected
+     lwc1_org  mohan.chinnappan.n-hhet@force.com  00DB0000000K3yVMAS  Connected
+
+     ALIAS      SCRATCH ORG NAME     USERNAME                       ORG ID              EXPIRATION DATE
+───  ─────────  ───────────────────  ─────────────────────────────  ──────────────────  ───────────────
+(U)  gp_sorg_1  mchinnappan Company  test-814uzdqzt3jg@example.com  00D540000001L9YEAU  2019-06-20   <------
+
+```
+
+### Open the created Scratch org
+
+``` bash
+
+# u, --targetusername TARGETUSERNAME  username or alias for the target org; overrides default target org
+sfdx force:org:open -u gp_sorg_1
+
+# gp_sorg_1 https://agility-energy-5928-dev-ed.lightning.force.com/lightning/setup/SetupOneHome/home
+
+# look at the active orgs in DevHub, you should see this scratch org gp_sorg1 in the list
+##  https://amazing-cloudy-210392.lightning.force.com/lightning/o/ActiveScratchOrg/list?filterName=Recent
+
+
+
+
+
+
+```
+
+### Create Account.GreenProjectInUse__c	Checkbox field in UI and pull into project folder
+
+``` bash
+
+Account.GreenProjectInUse__c	Checkbox
+
+sfdx force:source:pull -u gp_sorg_1
+
+=== Pulled Source
+STATE  FULL NAME                               TYPE         PROJECT PATH
+─────  ──────────────────────────────────────  ───────────  ─────────────────────────────────────────────────────────────────────────────────────
+Add    Account.GreenProjectInUse__c            CustomField  force-app/main/default/objects/Account/fields/GreenProjectInUse__c.field-meta.xml
+Add    Account-Account %28Marketing%29 Layout  Layout       force-app/main/default/layouts/Account-Account %28Marketing%29 Layout.layout-meta.xml
+Add    Account-Account %28Sales%29 Layout      Layout       force-app/main/default/layouts/Account-Account %28Sales%29 Layout.layout-meta.xml
+Add    Account-Account %28Support%29 Layout    Layout       force-app/main/default/layouts/Account-Account %28Support%29 Layout.layout-meta.xml
+Add    Account-Account Layout                  Layout       force-app/main/default/layouts/Account-Account Layout.layout-meta.xml
+Add    Admin                                   Profile      force-app/main/default/profiles/Admin.profile-meta.xml
+Add    Custom%3A Support Profile               Profile      force-app/main/default/profiles/Custom%3A Support Profile.profile-meta.xml
+Add    Custom%3A Sales Profile                 Profile      force-app/main/default/profiles/Custom%3A Sales Profile.profile-meta.xml
+Add    Custom%3A Marketing Profile             Profile      force-app/main/default/profiles/Custom%3A Marketing Profile.profile-meta.xml
+
+
+
+
+
 

@@ -1,0 +1,272 @@
+[
+    [
+        "/Users/mchinnappan/sfdx-demos/GreenProject/force-app",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdx-demos/GreenProject/force-app",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 96,
+            "modifiedTime": 1560436404464,
+            "changeTime": 1560436404464,
+            "contentHash": "b28b7af69320201d1cf206ebf28373980add1451",
+            "isWorkspace": false,
+            "isArtifactRoot": true
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 96,
+            "modifiedTime": 1560436404464,
+            "changeTime": 1560436404464,
+            "contentHash": "7505d64a54e061b7acd54ccd58b49dc43500b635",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default",
+        {
+            "state": "u",
+            "sourcePath": "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 224,
+            "modifiedTime": 1560438359781,
+            "changeTime": 1560438359781,
+            "contentHash": "a99b08e3d2d6efd88c4b56f5f01b594674d06db0"
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/aura",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/aura",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 64,
+            "modifiedTime": 1560436404464,
+            "changeTime": 1560436404464,
+            "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/lwc",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/lwc",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 64,
+            "modifiedTime": 1560436404464,
+            "changeTime": 1560436404464,
+            "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdx-demos/GreenProject",
+        {
+            "state": "n",
+            "sourcePath": "/Users/mchinnappan/sfdx-demos/GreenProject",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 256,
+            "modifiedTime": 1560437290955,
+            "changeTime": 1560437290955,
+            "contentHash": "07da07834d8f50a1018cf646c911906296572a7c",
+            "isWorkspace": true,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/objects/Account/fields/GreenProjectInUse__c.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/objects/Account/fields/GreenProjectInUse__c.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 480,
+            "modifiedTime": 1560438359754,
+            "changeTime": 1560438359754,
+            "contentHash": "afb4cf41a75e946994515469f09677d44aa86664"
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/layouts/Account-Account %28Marketing%29 Layout.layout-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/layouts/Account-Account %28Marketing%29 Layout.layout-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 9639,
+            "modifiedTime": 1560438359761,
+            "changeTime": 1560438359761,
+            "contentHash": "636d43b703d17ddcbaacb29a7ef5ec64cb36a35e"
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/layouts/Account-Account %28Sales%29 Layout.layout-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/layouts/Account-Account %28Sales%29 Layout.layout-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 9591,
+            "modifiedTime": 1560438359766,
+            "changeTime": 1560438359766,
+            "contentHash": "6200a7e02df8941aa7d08f2bee490d88ca5c0344"
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/layouts/Account-Account %28Support%29 Layout.layout-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/layouts/Account-Account %28Support%29 Layout.layout-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 9639,
+            "modifiedTime": 1560438359771,
+            "changeTime": 1560438359771,
+            "contentHash": "f06f9439740c29b6f22cce71a260b4c1cb617e92"
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/layouts/Account-Account Layout.layout-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/layouts/Account-Account Layout.layout-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 9591,
+            "modifiedTime": 1560438359776,
+            "changeTime": 1560438359776,
+            "contentHash": "e83dbebe7e6c59ea6bc3e73bd43b8b7bd9575c36"
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/profiles/Admin.profile-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/profiles/Admin.profile-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 18849,
+            "modifiedTime": 1560438359786,
+            "changeTime": 1560438359786,
+            "contentHash": "7b15d377f4249344bbdc9670d67446ab07e4c074"
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/profiles/Custom%3A Support Profile.profile-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/profiles/Custom%3A Support Profile.profile-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 5058,
+            "modifiedTime": 1560438359792,
+            "changeTime": 1560438359792,
+            "contentHash": "c6bb7711d26c85a1d8a6b0624ea414c8cecb03a6"
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/profiles/Custom%3A Sales Profile.profile-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/profiles/Custom%3A Sales Profile.profile-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 4718,
+            "modifiedTime": 1560438359795,
+            "changeTime": 1560438359795,
+            "contentHash": "999163e5bf18aed177af01ef17861aa3f2fdf985"
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/profiles/Custom%3A Marketing Profile.profile-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/profiles/Custom%3A Marketing Profile.profile-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 4722,
+            "modifiedTime": 1560438359797,
+            "changeTime": 1560438359797,
+            "contentHash": "cc942a7f9883b3a45e81b91f14fd70450d73c70a"
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/objects/Account/fields",
+        {
+            "state": "u",
+            "sourcePath": "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/objects/Account/fields",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 96,
+            "modifiedTime": 1560438359754,
+            "changeTime": 1560438359754,
+            "contentHash": "51379f11521b2e441096701f3bf1f52995357b51"
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/objects/Account",
+        {
+            "state": "u",
+            "sourcePath": "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/objects/Account",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 96,
+            "modifiedTime": 1560438359753,
+            "changeTime": 1560438359753,
+            "contentHash": "70f132fe13e692866a539996a6b9a05b46076a07"
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/objects",
+        {
+            "state": "u",
+            "sourcePath": "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/objects",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 96,
+            "modifiedTime": 1560438359753,
+            "changeTime": 1560438359753,
+            "contentHash": "85dfa32c97d8618d1bea083609e2c8a29845abe5"
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/layouts",
+        {
+            "state": "u",
+            "sourcePath": "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/layouts",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 192,
+            "modifiedTime": 1560438359775,
+            "changeTime": 1560438359775,
+            "contentHash": "e3687f65b0885128a02e534ece5e0cf3ce9f38c0"
+        }
+    ],
+    [
+        "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/profiles",
+        {
+            "state": "u",
+            "sourcePath": "/Users/mchinnappan/sfdx-demos/GreenProject/force-app/main/default/profiles",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 192,
+            "modifiedTime": 1560438359797,
+            "changeTime": 1560438359797,
+            "contentHash": "9c367b0e719eb8c48c5b0d9cbfb5f580a4bd6717"
+        }
+    ]
+]
